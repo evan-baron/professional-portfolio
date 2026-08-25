@@ -30,10 +30,14 @@
 	a {
 		color: var(--text-faint);
 		font-size: 1rem;
-		transition: color 0.2s;
+		transition:
+			color 0.2s,
+			filter 0.2s;
+		will-change: color, filter;
 
 		&:hover {
 			color: var(--accent);
+			filter: drop-shadow(0 0 8px var(--accent-soft-strong));
 		}
 	}
 }
@@ -43,6 +47,7 @@
 	font-size: 0.76rem;
 	color: var(--text-faint);
 	transition: color 0.2s;
+	will-change: color;
 
 	&:hover {
 		color: var(--text);

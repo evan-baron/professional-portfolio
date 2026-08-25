@@ -56,10 +56,22 @@
 }
 
 .formWrap {
+	position: relative;
 	background: var(--bg-elevated);
 	border: 1px solid var(--border);
 	border-radius: var(--radius-md);
-	padding: clamp(24px, 3vw, 36px);
+	padding: clamp(26px, 3vw, 38px);
+	overflow: hidden;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 2px;
+		background: var(--accent-gradient);
+	}
 }
 
 .form {
@@ -89,14 +101,18 @@
 		background: var(--bg-elevated-2);
 		border: 1px solid var(--border-strong);
 		border-radius: var(--radius-sm);
-		padding: 11px 14px;
-		font-size: 0.95rem;
+		padding: 12px 15px;
+		font-size: 0.97rem;
 		color: var(--text);
-		transition: border-color 0.2s;
+		transition:
+			border-color 0.2s,
+			box-shadow 0.2s;
+		will-change: border-color, box-shadow;
 		resize: vertical;
 
 		&:focus {
 			border-color: var(--accent);
+			box-shadow: 0 0 0 3px var(--accent-soft);
 		}
 
 		&::placeholder {
@@ -113,23 +129,30 @@
 
 .submit {
 	font-family: var(--font-mono);
-	font-size: 0.9rem;
-	background: var(--accent);
-	color: var(--bg);
-	padding: 13px 20px;
+	font-weight: 500;
+	font-size: 0.92rem;
+	background: var(--accent-gradient);
+	color: #1a0e05;
+	padding: 14px 22px;
 	border-radius: var(--radius-sm);
-	transition: filter 0.2s, box-shadow 0.2s, transform 0.2s var(--ease-out);
+	box-shadow: var(--glow-accent);
+	transition:
+		filter 0.2s,
+		box-shadow 0.2s,
+		transform 0.2s var(--ease-out);
+	will-change: filter, box-shadow, transform;
 	align-self: flex-start;
 
 	&:hover:not(:disabled) {
-		filter: brightness(1.12);
-		box-shadow: 0 10px 24px -8px var(--accent-soft-strong);
+		filter: brightness(1.08) saturate(1.1);
+		box-shadow: var(--glow-accent-lg);
 		transform: translateY(-2px);
 	}
 
 	&:disabled {
 		opacity: 0.6;
 		cursor: not-allowed;
+		box-shadow: none;
 	}
 }
 

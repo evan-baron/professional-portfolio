@@ -19,7 +19,10 @@
 		top: 8px;
 		bottom: 8px;
 		width: 1px;
-		background: linear-gradient(var(--border-strong), var(--border-hairline));
+		background: linear-gradient(
+			var(--accent-soft-strong),
+			var(--border-hairline) 65%
+		);
 	}
 }
 
@@ -36,11 +39,12 @@
 	position: absolute;
 	left: -28px;
 	top: 6px;
-	width: 11px;
-	height: 11px;
+	width: 12px;
+	height: 12px;
 	border-radius: 50%;
 	background: var(--bg);
 	border: 2px solid var(--accent);
+	box-shadow: 0 0 0 4px var(--accent-soft);
 }
 
 .compact .marker {
@@ -48,14 +52,19 @@
 }
 
 .content {
-	padding: 24px 28px;
+	padding: 26px 30px;
 	background: var(--bg-elevated);
 	border: 1px solid var(--border);
 	border-radius: var(--radius-md);
+	transition:
+		border-color 0.2s,
+		box-shadow 0.2s;
+	will-change: border-color, box-shadow;
 }
 
 .featured .content {
 	background: var(--bg-elevated);
+	border-top: 2px solid var(--accent-dim);
 }
 
 .compact .content {
@@ -74,7 +83,7 @@
 }
 
 .role {
-	font-size: 1.15rem;
+	font-size: 1.22rem;
 	color: var(--text);
 	margin-bottom: 4px;
 }

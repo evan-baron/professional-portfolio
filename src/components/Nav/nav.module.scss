@@ -7,6 +7,7 @@
 	-webkit-backdrop-filter: blur(10px);
 	border-bottom: 1px solid transparent;
 	transition: border-color 0.3s var(--ease-out), background 0.3s var(--ease-out);
+	will-change: border-color, background;
 
 	&.scrolled {
 		border-bottom-color: var(--border);
@@ -16,7 +17,7 @@
 .inner {
 	max-width: var(--container);
 	margin: 0 auto;
-	padding: 18px 32px;
+	padding: 20px 32px;
 	display: flex;
 	align-items: center;
 	gap: 32px;
@@ -32,12 +33,19 @@
 .logoMark {
 	font-family: var(--font-mono);
 	font-weight: 600;
-	font-size: 1.05rem;
+	font-size: 1.1rem;
 	color: var(--text);
 	letter-spacing: 0.04em;
 	border: 1px solid var(--border-strong);
-	padding: 3px 8px;
+	padding: 4px 9px;
 	border-radius: var(--radius-sm);
+	transition: border-color 0.2s, box-shadow 0.2s;
+	will-change: border-color, box-shadow;
+}
+
+.logo:hover .logoMark {
+	border-color: var(--accent-dim);
+	box-shadow: 0 0 0 3px var(--accent-soft);
 }
 
 .logoStatus {
@@ -86,16 +94,34 @@
 
 .link {
 	font-family: var(--font-mono);
-	font-size: 0.82rem;
+	font-size: 0.84rem;
 	color: var(--text-dim);
 	display: flex;
 	align-items: center;
 	gap: 6px;
+	padding-bottom: 3px;
 	transition: color 0.2s;
+	will-change: color;
 	position: relative;
+
+	&::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		right: 100%;
+		bottom: 0;
+		height: 1px;
+		background: var(--accent-gradient);
+		transition: right 0.25s var(--ease-out);
+		will-change: right;
+	}
 
 	&:hover {
 		color: var(--text);
+
+		&::after {
+			right: 0;
+		}
 	}
 }
 
@@ -106,17 +132,19 @@
 
 .cta {
 	font-family: var(--font-mono);
-	font-size: 0.82rem;
-	color: var(--bg);
-	background: var(--accent);
-	padding: 8px 16px;
+	font-weight: 500;
+	font-size: 0.84rem;
+	color: #1a0e05;
+	background: var(--accent-gradient);
+	padding: 9px 18px;
 	border-radius: var(--radius-sm);
 	white-space: nowrap;
 	transition: transform 0.2s var(--ease-out), filter 0.2s, box-shadow 0.2s;
+	will-change: transform, filter, box-shadow;
 
 	&:hover {
-		filter: brightness(1.12);
-		box-shadow: 0 8px 20px -8px var(--accent-soft-strong);
+		filter: brightness(1.08) saturate(1.1);
+		box-shadow: var(--glow-accent);
 		transform: translateY(-1px);
 	}
 
@@ -142,6 +170,7 @@
 		height: 2px;
 		background: var(--text);
 		transition: transform 0.25s var(--ease-out), opacity 0.25s;
+		will-change: transform, opacity;
 		position: relative;
 	}
 
@@ -178,6 +207,7 @@
 	overflow: hidden;
 	border-bottom: 1px solid transparent;
 	transition: max-height 0.35s var(--ease-out), border-color 0.3s;
+	will-change: max-height, border-color;
 
 	nav {
 		display: flex;

@@ -1,46 +1,51 @@
 // ---------------------------------------------------------------------------
 // Design tokens
-// Aesthetic: editor/IDE-inspired dark canvas — a serif display face for
-// warmth against a mono-driven UI chrome, one amber accent doing most of the
-// work, teal + coral reserved for small syntax-style flourishes.
+// Aesthetic: editor/IDE-inspired dark canvas, turned up — the same amber
+// core identity, but more saturated, with a molten gradient variant for
+// buttons and headline accents, glow-shadow tokens for hover states, and a
+// soft ambient wash behind the page instead of a flat void.
 // ---------------------------------------------------------------------------
 
 :root {
-	--bg: #0a0c0f;
+	--bg: #08090c;
 	--bg-elevated: #12151a;
 	--bg-elevated-2: #171b22;
 	--bg-overlay: #1c2028;
 
-	--border: #232830;
-	--border-strong: #323a46;
+	--border: #262b34;
+	--border-strong: #3a4250;
 	--border-hairline: #1b1f26;
 
-	--text: #e9e6df;
-	--text-dim: #939aa6;
-	--text-faint: #565f6c;
+	--text: #eeebe3;
+	--text-dim: #9aa1b0;
+	--text-faint: #5c6572;
 
-	--accent: #f2b153;
-	--accent-code: #f2b153;
-	--accent-dim: #b98b42;
-	--accent-soft: rgba(242, 177, 83, 0.12);
-	--accent-soft-strong: rgba(242, 177, 83, 0.22);
+	--accent: #ff9d4d;
+	--accent-code: #ffc157;
+	--accent-dim: #d97a2a;
+	--accent-soft: rgba(255, 157, 77, 0.14);
+	--accent-soft-strong: rgba(255, 157, 77, 0.28);
+	--accent-gradient: linear-gradient(135deg, #ff6a5a 0%, #ff9d4d 55%, #ffc157 100%);
 
-	--accent-2: #7fd9c4;
-	--accent-2-soft: rgba(127, 217, 196, 0.12);
+	--accent-2: #52e3c2;
+	--accent-2-soft: rgba(82, 227, 194, 0.14);
 
-	--accent-3: #c792ea;
+	--accent-3: #cf94f2;
 
-	--coral: #ec6a5e;
-	--coral-soft: rgba(236, 106, 94, 0.12);
+	--coral: #f0665a;
+	--coral-soft: rgba(240, 102, 90, 0.14);
+
+	--glow-accent: 0 10px 30px -10px rgba(255, 130, 61, 0.5);
+	--glow-accent-lg: 0 20px 60px -16px rgba(255, 130, 61, 0.55);
 
 	--font-display: var(--font-fraunces), 'Iowan Old Style', Georgia, serif;
 	--font-mono: var(--font-jetbrains), 'SFMono-Regular', Consolas, monospace;
 	--font-body: var(--font-public-sans), -apple-system, 'Segoe UI', sans-serif;
 
-	--container: 1160px;
+	--container: 1200px;
 	--gutter-w: 44px;
-	--radius-sm: 4px;
-	--radius-md: 8px;
+	--radius-sm: 5px;
+	--radius-md: 10px;
 
 	--ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 
@@ -160,7 +165,8 @@ p {
 	border: 0;
 }
 
-// Faint blueprint-grid + noise texture applied behind the whole page
+// Faint blueprint-grid over a soft ambient color wash, both fading out
+// toward the bottom of the viewport rather than tiling the whole page flat.
 body::before {
 	content: '';
 	position: fixed;
@@ -169,14 +175,16 @@ body::before {
 	pointer-events: none;
 	background-image:
 		linear-gradient(var(--border-hairline) 1px, transparent 1px),
-		linear-gradient(90deg, var(--border-hairline) 1px, transparent 1px);
-	background-size: 64px 64px;
+		linear-gradient(90deg, var(--border-hairline) 1px, transparent 1px),
+		radial-gradient(ellipse 60% 45% at 85% 8%, rgba(255, 157, 77, 0.16), transparent 70%),
+		radial-gradient(ellipse 50% 40% at 8% 28%, rgba(82, 227, 194, 0.1), transparent 72%);
+	background-size: 64px 64px, 64px 64px, 100% 100%, 100% 100%;
 	mask-image: radial-gradient(
 		ellipse 90% 60% at 50% 0%,
 		black 40%,
 		transparent 85%
 	);
-	opacity: 0.5;
+	opacity: 0.65;
 }
 
 body::after {
