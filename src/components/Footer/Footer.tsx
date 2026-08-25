@@ -9,7 +9,7 @@ const Footer = () => {
 		<footer className={styles.footer}>
 			<div className={styles.inner}>
 				<p className={styles.copy}>
-					<span aria-hidden='true'>{'// '}</span>© {year} Evan Baron. Built with Next.js.
+					© {year} Evan Baron. Built with Next.js.
 				</p>
 
 				<div className={styles.links}>

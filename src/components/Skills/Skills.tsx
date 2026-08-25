@@ -11,7 +11,7 @@ const Skills = () => {
 
 				<div className={styles.groups}>
 					{skills.map((group, i) => (
-						<Reveal key={group.label} delay={i * 0.07} className={styles.group}>
+						<Reveal key={group.label} delay={i * 0.06} className={styles.group}>
 							<h3 className={styles.groupLabel}>{group.label}</h3>
 							<ul className={styles.chips}>
 								{group.items.map((item) => (

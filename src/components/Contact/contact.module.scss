@@ -1,6 +1,6 @@
 .contact {
 	padding: clamp(64px, 10vh, 120px) 32px;
-	border-top: 1px solid var(--border-hairline);
+	border-top: 1px solid var(--border);
 }
 
 .inner {
@@ -20,7 +20,7 @@
 }
 
 .heading {
-	font-size: clamp(1.5rem, 2.6vw, 2rem);
+	font-size: clamp(1.6rem, 2.6vw, 2.1rem);
 	color: var(--text);
 	margin-bottom: 18px;
 }
@@ -34,15 +34,19 @@
 .details {
 	display: flex;
 	flex-direction: column;
-	gap: 16px;
 
 	li {
 		display: flex;
 		align-items: center;
 		gap: 12px;
-		font-family: var(--font-mono);
-		font-size: 0.9rem;
+		font-size: 0.92rem;
 		color: var(--text-dim);
+		padding: 14px 0;
+		border-top: 1px solid var(--border);
+
+		&:last-child {
+			border-bottom: 1px solid var(--border);
+		}
 
 		svg {
 			color: var(--accent);
@@ -56,27 +60,23 @@
 }
 
 .formWrap {
-	background: var(--bg-elevated);
-	border: 1px solid var(--border);
-	border-radius: var(--radius-md);
-	padding: clamp(24px, 3vw, 36px);
+	width: 100%;
 }
 
 .form {
 	display: flex;
 	flex-direction: column;
-	gap: 20px;
+	gap: 26px;
 }
 
 .field {
 	display: flex;
 	flex-direction: column;
-	gap: 8px;
+	gap: 10px;
 
 	label {
-		font-family: var(--font-mono);
-		font-size: 0.8rem;
-		color: var(--text-dim);
+		font-size: 0.85rem;
+		color: var(--text-faint);
 
 		span {
 			color: var(--accent);
@@ -86,13 +86,14 @@
 
 	input,
 	textarea {
-		background: var(--bg-elevated-2);
-		border: 1px solid var(--border-strong);
-		border-radius: var(--radius-sm);
-		padding: 11px 14px;
-		font-size: 0.95rem;
+		background: transparent;
+		border: none;
+		border-bottom: 1px solid var(--border-strong);
+		border-radius: 0;
+		padding: 10px 0;
+		font-size: 1rem;
 		color: var(--text);
-		transition: border-color 0.2s;
+		transition: border-color 0.15s;
 		resize: vertical;
 
 		&:focus {
@@ -106,48 +107,42 @@
 }
 
 .error {
-	font-family: var(--font-mono);
-	font-size: 0.74rem;
-	color: var(--coral);
+	font-size: 0.78rem;
+	color: var(--accent);
 }
 
 .submit {
-	font-family: var(--font-mono);
-	font-size: 0.9rem;
+	font-weight: 600;
+	font-size: 0.94rem;
 	background: var(--accent);
-	color: var(--bg);
-	padding: 13px 20px;
-	border-radius: var(--radius-sm);
-	transition: filter 0.2s, box-shadow 0.2s, transform 0.2s var(--ease-out);
+	color: var(--text-on-accent);
+	padding: 14px 26px;
+	transition: background 0.15s;
 	align-self: flex-start;
+	margin-top: 8px;
 
 	&:hover:not(:disabled) {
-		filter: brightness(1.12);
-		box-shadow: 0 10px 24px -8px var(--accent-soft-strong);
-		transform: translateY(-2px);
+		background: var(--accent-dim);
 	}
 
 	&:disabled {
-		opacity: 0.6;
+		opacity: 0.5;
 		cursor: not-allowed;
 	}
 }
 
 .success {
-	font-family: var(--font-mono);
-	font-size: 0.85rem;
-	color: var(--accent-2);
+	font-size: 0.9rem;
+	color: var(--text);
 }
 
 .formError {
-	font-family: var(--font-mono);
-	font-size: 0.85rem;
-	color: var(--coral);
+	font-size: 0.9rem;
+	color: var(--accent);
 }
 
 .formLoading {
-	font-family: var(--font-mono);
-	font-size: 0.85rem;
+	font-size: 0.9rem;
 	color: var(--text-faint);
 	padding: 40px;
 	text-align: center;

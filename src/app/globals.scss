@@ -1,46 +1,39 @@
 // ---------------------------------------------------------------------------
 // Design tokens
-// Aesthetic: editor/IDE-inspired dark canvas — a serif display face for
-// warmth against a mono-driven UI chrome, one amber accent doing most of the
-// work, teal + coral reserved for small syntax-style flourishes.
+// Aesthetic: Swiss / International Typographic Style, ported to a dark
+// canvas. One grotesque typeface carries the whole page — hierarchy comes
+// from weight and scale, not decoration. One red-orange accent, used
+// sparingly (a rule, a number, a single filled button). Structure comes
+// from rules and a strict two-column grid (a narrow numeral gutter beside
+// the content column), never from bordered cards or panels.
 // ---------------------------------------------------------------------------
 
 :root {
-	--bg: #0a0c0f;
-	--bg-elevated: #12151a;
-	--bg-elevated-2: #171b22;
-	--bg-overlay: #1c2028;
+	--bg: #0b0b0c;
+	--bg-raised: #141415;
 
-	--border: #232830;
-	--border-strong: #323a46;
-	--border-hairline: #1b1f26;
+	--border: #29292a;
+	--border-strong: #414143;
+	--border-hairline: #1c1c1d;
 
-	--text: #e9e6df;
-	--text-dim: #939aa6;
-	--text-faint: #565f6c;
+	--text: #f2f1ee;
+	--text-dim: #9c9b97;
+	--text-faint: #656462;
+	--text-on-accent: #0b0b0c;
 
-	--accent: #f2b153;
-	--accent-code: #f2b153;
-	--accent-dim: #b98b42;
-	--accent-soft: rgba(242, 177, 83, 0.12);
-	--accent-soft-strong: rgba(242, 177, 83, 0.22);
+	--accent: #e8492b;
+	--accent-dim: #b8371f;
+	--accent-soft: rgba(232, 73, 43, 0.12);
+	--accent-soft-strong: rgba(232, 73, 43, 0.22);
 
-	--accent-2: #7fd9c4;
-	--accent-2-soft: rgba(127, 217, 196, 0.12);
-
-	--accent-3: #c792ea;
-
-	--coral: #ec6a5e;
-	--coral-soft: rgba(236, 106, 94, 0.12);
-
-	--font-display: var(--font-fraunces), 'Iowan Old Style', Georgia, serif;
+	--font-display: var(--font-hanken), -apple-system, 'Segoe UI', sans-serif;
+	--font-body: var(--font-hanken), -apple-system, 'Segoe UI', sans-serif;
 	--font-mono: var(--font-jetbrains), 'SFMono-Regular', Consolas, monospace;
-	--font-body: var(--font-public-sans), -apple-system, 'Segoe UI', sans-serif;
 
-	--container: 1160px;
-	--gutter-w: 44px;
-	--radius-sm: 4px;
-	--radius-md: 8px;
+	--container: 1200px;
+	--gutter: 200px;
+	--radius-sm: 0px;
+	--radius-md: 0px;
 
 	--ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 
@@ -130,8 +123,9 @@ h2,
 h3,
 h4 {
 	font-family: var(--font-display);
-	font-weight: 600;
-	line-height: 1.1;
+	font-weight: 800;
+	line-height: 1;
+	letter-spacing: -0.01em;
 }
 
 p {
@@ -160,33 +154,16 @@ p {
 	border: 0;
 }
 
-// Faint blueprint-grid + noise texture applied behind the whole page
+// A very faint print-grain sits over the page — enough to keep flat black
+// from reading as sterile digital void, without any decorative pattern.
 body::before {
 	content: '';
 	position: fixed;
 	inset: 0;
 	z-index: 0;
 	pointer-events: none;
-	background-image:
-		linear-gradient(var(--border-hairline) 1px, transparent 1px),
-		linear-gradient(90deg, var(--border-hairline) 1px, transparent 1px);
-	background-size: 64px 64px;
-	mask-image: radial-gradient(
-		ellipse 90% 60% at 50% 0%,
-		black 40%,
-		transparent 85%
-	);
-	opacity: 0.5;
-}
-
-body::after {
-	content: '';
-	position: fixed;
-	inset: 0;
-	z-index: 0;
-	pointer-events: none;
-	opacity: 0.035;
-	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+	opacity: 0.03;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
 #__next,

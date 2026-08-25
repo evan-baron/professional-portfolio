@@ -1,6 +1,6 @@
 .skills {
 	padding: clamp(48px, 8vh, 96px) 32px;
-	border-top: 1px solid var(--border-hairline);
+	border-top: 1px solid var(--border);
 }
 
 .inner {
@@ -9,39 +9,43 @@
 }
 
 .groups {
+	display: flex;
+	flex-direction: column;
+}
+
+.group {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-	gap: 36px 28px;
+	grid-template-columns: 200px 1fr;
+	gap: 8px 20px;
+	padding: 20px 0;
+	border-top: 1px solid var(--border);
+
+	&:last-child {
+		border-bottom: 1px solid var(--border);
+	}
+
+	@media (max-width: 700px) {
+		grid-template-columns: 1fr;
+	}
 }
 
 .groupLabel {
-	font-family: var(--font-mono);
-	font-size: 0.78rem;
-	color: var(--accent-2);
-	text-transform: uppercase;
-	letter-spacing: 0.08em;
-	margin-bottom: 16px;
+	font-size: 1rem;
+	font-weight: 600;
+	color: var(--text);
 }
 
 .chips {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 8px;
+	color: var(--text-dim);
+	font-size: 0.98rem;
 }
 
 .chip {
-	font-family: var(--font-mono);
-	font-size: 0.82rem;
-	color: var(--text-dim);
-	background: var(--bg-elevated);
-	border: 1px solid var(--border);
-	padding: 6px 12px;
-	border-radius: 999px;
-	transition: color 0.2s, border-color 0.2s, transform 0.2s var(--ease-out);
-
-	&:hover {
-		color: var(--text);
-		border-color: var(--accent-dim);
-		transform: translateY(-1px);
+	&:not(:last-child)::after {
+		content: '\00b7';
+		margin: 0 10px;
+		color: var(--text-faint);
 	}
 }

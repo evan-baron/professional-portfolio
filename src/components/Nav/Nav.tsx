@@ -33,7 +33,7 @@ const Nav = () => {
 		<header className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
 			<div className={styles.inner}>
 				<Link href='#top' className={styles.logo} aria-label='Evan Baron, home'>
-					<span className={styles.logoMark}>EB</span>
+					<span className={styles.logoMark}>Evan Baron</span>
 					<span className={styles.logoStatus}>
 						<span className={styles.dot} aria-hidden='true' />
 						available for work

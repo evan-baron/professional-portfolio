@@ -5,27 +5,22 @@ import Reveal from '../Reveal/Reveal';
 import { FiArrowUpRight } from 'react-icons/fi';
 import styles from './projects.module.scss';
 
-const accents = ['accentA', 'accentB', 'accentC'] as const;
-
 const Projects = () => {
 	return (
 		<section id='projects' className={styles.projects}>
 			<div className={styles.inner}>
 				<SectionHeading index='04' title='Projects' />
 
-				<div className={styles.grid}>
+				<ol className={styles.list}>
 					{projects.map((project, i) => (
-						<Reveal key={project.name} delay={i * 0.08}>
-							<Link
-								href={project.href}
-								target='_blank'
-								rel='noreferrer noopener'
-								className={`${styles.card} ${styles[accents[i % accents.length]]}`}
-							>
-								<div className={styles.cardHead}>
+						<Reveal as='li' key={project.name} delay={i * 0.08} className={styles.entry}>
+							<span className={styles.number}>{String(i + 1).padStart(2, '0')}</span>
+
+							<div className={styles.content}>
+								<div className={styles.head}>
 									<h3 className={styles.name}>{project.name}</h3>
+									<p className={styles.tagline}>{project.tagline}</p>
 								</div>
-								<p className={styles.tagline}>{project.tagline}</p>
 
 								<ul className={styles.bullets}>
 									{project.bullets.map((bullet) => (
@@ -39,15 +34,20 @@ const Projects = () => {
 									))}
 								</ul>
 
-								<span className={styles.link}>
+								<Link
+									href={project.href}
+									target='_blank'
+									rel='noreferrer noopener'
+									className={styles.link}
+								>
 									{project.linkLabel}
 									<FiArrowUpRight />
 									<span className='sr-only'> (opens in a new tab)</span>
-								</span>
-							</Link>
+								</Link>
+							</div>
 						</Reveal>
 					))}
-				</div>
+				</ol>
 			</div>
 		</section>
 	);

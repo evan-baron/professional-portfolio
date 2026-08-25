@@ -1,6 +1,6 @@
 .footer {
-	border-top: 1px solid var(--border-hairline);
-	padding: 32px;
+	border-top: 1px solid var(--border);
+	padding: 28px 32px;
 }
 
 .inner {
@@ -14,23 +14,18 @@
 }
 
 .copy {
-	font-family: var(--font-mono);
-	font-size: 0.76rem;
+	font-size: 0.86rem;
 	color: var(--text-faint);
-
-	span {
-		color: var(--text-faint);
-	}
 }
 
 .links {
 	display: flex;
-	gap: 16px;
+	gap: 18px;
 
 	a {
 		color: var(--text-faint);
 		font-size: 1rem;
-		transition: color 0.2s;
+		transition: color 0.15s;
 
 		&:hover {
 			color: var(--accent);
@@ -39,10 +34,9 @@
 }
 
 .toTop {
-	font-family: var(--font-mono);
-	font-size: 0.76rem;
+	font-size: 0.86rem;
 	color: var(--text-faint);
-	transition: color 0.2s;
+	transition: color 0.15s;
 
 	&:hover {
 		color: var(--text);

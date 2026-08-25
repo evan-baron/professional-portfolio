@@ -2,21 +2,14 @@
 	position: sticky;
 	top: 0;
 	z-index: 100;
-	background: rgba(10, 12, 15, 0.7);
-	backdrop-filter: blur(10px);
-	-webkit-backdrop-filter: blur(10px);
-	border-bottom: 1px solid transparent;
-	transition: border-color 0.3s var(--ease-out), background 0.3s var(--ease-out);
-
-	&.scrolled {
-		border-bottom-color: var(--border);
-	}
+	background: var(--bg);
+	border-bottom: 1px solid var(--border);
 }
 
 .inner {
 	max-width: var(--container);
 	margin: 0 auto;
-	padding: 18px 32px;
+	padding: 22px 32px;
 	display: flex;
 	align-items: center;
 	gap: 32px;
@@ -30,24 +23,21 @@
 }
 
 .logoMark {
-	font-family: var(--font-mono);
-	font-weight: 600;
+	font-family: var(--font-display);
+	font-weight: 800;
 	font-size: 1.05rem;
 	color: var(--text);
-	letter-spacing: 0.04em;
-	border: 1px solid var(--border-strong);
-	padding: 3px 8px;
-	border-radius: var(--radius-sm);
+	letter-spacing: -0.01em;
 }
 
 .logoStatus {
 	display: flex;
 	align-items: center;
-	gap: 7px;
+	gap: 8px;
 	font-family: var(--font-mono);
 	font-size: 0.7rem;
+	letter-spacing: 0.04em;
 	color: var(--text-faint);
-	letter-spacing: 0.02em;
 
 	@media (max-width: 760px) {
 		display: none;
@@ -58,26 +48,12 @@
 	width: 6px;
 	height: 6px;
 	border-radius: 50%;
-	background: var(--accent-2);
-	box-shadow: 0 0 0 0 var(--accent-2-soft);
-	animation: pulse 2.4s infinite;
-}
-
-@keyframes pulse {
-	0% {
-		box-shadow: 0 0 0 0 rgba(127, 217, 196, 0.5);
-	}
-	70% {
-		box-shadow: 0 0 0 6px rgba(127, 217, 196, 0);
-	}
-	100% {
-		box-shadow: 0 0 0 0 rgba(127, 217, 196, 0);
-	}
+	background: var(--accent);
 }
 
 .links {
 	display: flex;
-	gap: 28px;
+	gap: 30px;
 
 	@media (max-width: 900px) {
 		display: none;
@@ -85,14 +61,13 @@
 }
 
 .link {
-	font-family: var(--font-mono);
-	font-size: 0.82rem;
+	font-family: var(--font-body);
+	font-size: 0.92rem;
 	color: var(--text-dim);
 	display: flex;
-	align-items: center;
+	align-items: baseline;
 	gap: 6px;
-	transition: color 0.2s;
-	position: relative;
+	transition: color 0.15s;
 
 	&:hover {
 		color: var(--text);
@@ -100,24 +75,27 @@
 }
 
 .linkIndex {
+	font-family: var(--font-mono);
 	color: var(--text-faint);
-	font-size: 0.72rem;
+	font-size: 0.68rem;
+}
+
+.link:hover .linkIndex {
+	color: var(--accent);
 }
 
 .cta {
-	font-family: var(--font-mono);
-	font-size: 0.82rem;
-	color: var(--bg);
+	font-family: var(--font-body);
+	font-weight: 600;
+	font-size: 0.9rem;
+	color: var(--text-on-accent);
 	background: var(--accent);
-	padding: 8px 16px;
-	border-radius: var(--radius-sm);
+	padding: 9px 18px;
 	white-space: nowrap;
-	transition: transform 0.2s var(--ease-out), filter 0.2s, box-shadow 0.2s;
+	transition: background 0.15s;
 
 	&:hover {
-		filter: brightness(1.12);
-		box-shadow: 0 8px 20px -8px var(--accent-soft-strong);
-		transform: translateY(-1px);
+		background: var(--accent-dim);
 	}
 
 	@media (max-width: 900px) {
@@ -177,7 +155,7 @@
 	max-height: 0;
 	overflow: hidden;
 	border-bottom: 1px solid transparent;
-	transition: max-height 0.35s var(--ease-out), border-color 0.3s;
+	transition: max-height 0.35s var(--ease-out), border-color 0.2s;
 
 	nav {
 		display: flex;
@@ -196,13 +174,14 @@
 }
 
 .mobileLink {
-	font-family: var(--font-mono);
-	font-size: 1rem;
+	font-family: var(--font-body);
+	font-weight: 600;
+	font-size: 1.1rem;
 	color: var(--text-dim);
-	padding: 12px 0;
+	padding: 13px 0;
 	border-bottom: 1px solid var(--border-hairline);
 	display: flex;
-	align-items: center;
+	align-items: baseline;
 	gap: 10px;
 
 	&:hover {
