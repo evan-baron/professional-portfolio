@@ -17,8 +17,9 @@ const Contact = () => {
 							Have a project in mind, or just want to talk shop?
 						</h2>
 						<p className={styles.subtext}>
-							I&apos;m open to full-stack roles and select contract work. Reach out
-							directly or send a message and I&apos;ll respond within a day or two.
+							I&apos;m open to full-stack roles and select contract work. Reach
+							out directly or send a message and I&apos;ll respond within a day
+							or two.
 						</p>
 
 						<ul className={styles.details}>
@@ -26,10 +27,10 @@ const Contact = () => {
 								<FiMail aria-hidden='true' />
 								<Link href='mailto:egbaron@gmail.com'>egbaron@gmail.com</Link>
 							</li>
-							<li>
+							{/* <li>
 								<FiPhone aria-hidden='true' />
 								<Link href='tel:+13035883117'>303-588-3117</Link>
-							</li>
+							</li> */}
 							<li>
 								<FiLinkedin aria-hidden='true' />
 								<Link
