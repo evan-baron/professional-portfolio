@@ -9,6 +9,21 @@ const dividerLabel = (featured: boolean) =>
 		? 'Since transitioning to engineering'
 		: 'Before the switch — enterprise sales';
 
+// Minimal inline markup: wrap a phrase in **double asterisks** in the data
+// file to render it emphasized, without pulling in a markdown dependency.
+const renderEmphasis = (text: string) =>
+	text
+		.split(/\*\*(.+?)\*\*/g)
+		.map((part, i) =>
+			i % 2 === 1 ? (
+				<strong key={i} className={styles.emphasis}>
+					{part}
+				</strong>
+			) : (
+				part
+			)
+		);
+
 const Experience = () => {
 	return (
 		<section id='experience' className={styles.experience}>
@@ -62,7 +77,7 @@ const Experience = () => {
 
 									<ul className={styles.bullets}>
 										{item.bullets.map((bullet) => (
-											<li key={bullet}>{bullet}</li>
+											<li key={bullet}>{renderEmphasis(bullet)}</li>
 										))}
 									</ul>
 								</div>

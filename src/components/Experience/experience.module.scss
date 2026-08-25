@@ -176,6 +176,13 @@
 	}
 }
 
+// Inline emphasis for **marked** phrases within a bullet — stays legible
+// against both the dim resting color and the brighter hover/touch color.
+.emphasis {
+	filter: brightness(1.25);
+	font-weight: 600;
+}
+
 // The "bright" treatment: revealed on hover for pointer devices, and on by
 // default for touch devices, which have no hover state to reveal it with.
 @media (hover: hover) {
