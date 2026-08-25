@@ -22,9 +22,9 @@ const Hero = () => {
 						Evan <em>Baron</em>
 					</h1>
 					<p className={styles.tagline}>
-						I build production web applications end-to-end, from schema design to
-						the pixels you click. Formerly enterprise SaaS sales, now shipping
-						Next.js and TypeScript for a living.
+						I build production web applications end-to-end, from schema design
+						to the pixels you click. Formerly enterprise SaaS sales, now
+						shipping Next.js and TypeScript for a living.
 					</p>
 
 					<div className={styles.actions}>
@@ -93,21 +93,24 @@ const Hero = () => {
 							<span className={styles.str}>&apos;Next.js&apos;</span>,{' '}
 							<span className={styles.str}>&apos;React&apos;</span>,{'\n'}
 							<span className={styles.ln}>5</span>
-							{'         '}
+							{'          '}
 							<span className={styles.str}>&apos;TypeScript&apos;</span>,{' '}
-							<span className={styles.str}>&apos;PostgreSQL&apos;</span>],{'\n'}
+							<span className={styles.str}>&apos;Node.js&apos;</span>,{'\n'}
 							<span className={styles.ln}>6</span>
+							{'          '}
+							<span className={styles.str}>&apos;PostgreSQL&apos;</span>],{'\n'}
+							<span className={styles.ln}>7</span>
 							{'  '}
 							<span className={styles.prop}>focus</span>:{' '}
 							<span className={styles.str}>
 								&apos;end-to-end ownership&apos;
 							</span>
 							,{'\n'}
-							<span className={styles.ln}>7</span>
+							<span className={styles.ln}>8</span>
 							{'  '}
 							<span className={styles.prop}>available</span>:{' '}
 							<span className={styles.bool}>true</span>,{'\n'}
-							<span className={styles.ln}>8</span>
+							<span className={styles.ln}>9</span>
 							{'}'}
 							<span className={styles.cursor} aria-hidden='true' />
 						</code>

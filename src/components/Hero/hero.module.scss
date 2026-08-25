@@ -199,6 +199,11 @@
 	white-space: pre;
 	overflow-x: auto;
 	color: var(--text);
+
+	@media (max-width: 480px) {
+		padding: 16px 14px;
+		font-size: 0.72rem;
+	}
 }
 
 .ln {
@@ -206,6 +211,10 @@
 	width: 20px;
 	color: var(--text-faint);
 	user-select: none;
+
+	@media (max-width: 480px) {
+		width: 16px;
+	}
 }
 
 .kw {
