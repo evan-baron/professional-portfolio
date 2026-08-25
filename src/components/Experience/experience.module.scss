@@ -140,6 +140,25 @@
 	color: var(--text-faint);
 }
 
+// --- closing note: gestures at unlisted prior experience without a fake entry ---
+
+.foldMarker {
+	border: 1px dashed var(--border-hairline);
+	background: transparent;
+}
+
+.foldNote {
+	padding-top: 4px;
+	font-family: var(--font-mono);
+	font-size: 0.82rem;
+	font-style: italic;
+	line-height: 1.6;
+	// color: #6f8f6a;
+	// color: var(--accent);
+	// opacity: 0.75;
+	color: var(--text-faint);
+}
+
 @media (max-width: 640px) {
 	.timeline {
 		padding-left: 20px;

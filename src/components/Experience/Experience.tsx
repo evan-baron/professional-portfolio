@@ -43,6 +43,23 @@ const Experience = () => {
 							</div>
 						</Reveal>
 					))}
+
+					<Reveal
+						as='li'
+						delay={experience.length * 0.06}
+						className={styles.item}
+					>
+						<div
+							className={`${styles.marker} ${styles.foldMarker}`}
+							aria-hidden='true'
+						/>
+						<p className={styles.foldNote}>
+							<span aria-hidden='true'>{'/* '}</span>
+							earlier roles in sales, omitted for brevity; happy to share on
+							request
+							<span aria-hidden='true'>{' */'}</span>
+						</p>
+					</Reveal>
 				</ol>
 			</div>
 		</section>
