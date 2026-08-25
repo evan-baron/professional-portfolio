@@ -1,0 +1,153 @@
+.contact {
+	padding: clamp(64px, 10vh, 120px) 32px;
+	border-top: 1px solid var(--border-hairline);
+}
+
+.inner {
+	max-width: var(--container);
+	margin: 0 auto;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: 0.9fr 1.1fr;
+	gap: clamp(32px, 6vw, 72px);
+
+	@media (max-width: 860px) {
+		grid-template-columns: 1fr;
+		gap: 40px;
+	}
+}
+
+.heading {
+	font-size: clamp(1.5rem, 2.6vw, 2rem);
+	color: var(--text);
+	margin-bottom: 18px;
+}
+
+.subtext {
+	color: var(--text-dim);
+	max-width: 46ch;
+	margin-bottom: 32px;
+}
+
+.details {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+
+	li {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		font-family: var(--font-mono);
+		font-size: 0.9rem;
+		color: var(--text-dim);
+
+		svg {
+			color: var(--accent);
+			flex-shrink: 0;
+		}
+	}
+
+	a:hover {
+		color: var(--text);
+	}
+}
+
+.formWrap {
+	background: var(--bg-elevated);
+	border: 1px solid var(--border);
+	border-radius: var(--radius-md);
+	padding: clamp(24px, 3vw, 36px);
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.field {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+
+	label {
+		font-family: var(--font-mono);
+		font-size: 0.8rem;
+		color: var(--text-dim);
+
+		span {
+			color: var(--accent);
+			margin-left: 3px;
+		}
+	}
+
+	input,
+	textarea {
+		background: var(--bg-elevated-2);
+		border: 1px solid var(--border-strong);
+		border-radius: var(--radius-sm);
+		padding: 11px 14px;
+		font-size: 0.95rem;
+		color: var(--text);
+		transition: border-color 0.2s;
+		resize: vertical;
+
+		&:focus {
+			border-color: var(--accent);
+		}
+
+		&::placeholder {
+			color: var(--text-faint);
+		}
+	}
+}
+
+.error {
+	font-family: var(--font-mono);
+	font-size: 0.74rem;
+	color: var(--coral);
+}
+
+.submit {
+	font-family: var(--font-mono);
+	font-size: 0.9rem;
+	background: var(--accent);
+	color: var(--bg);
+	padding: 13px 20px;
+	border-radius: var(--radius-sm);
+	transition: background 0.2s, transform 0.2s var(--ease-out);
+	align-self: flex-start;
+
+	&:hover:not(:disabled) {
+		background: #ffc670;
+		transform: translateY(-2px);
+	}
+
+	&:disabled {
+		opacity: 0.6;
+		cursor: not-allowed;
+	}
+}
+
+.success {
+	font-family: var(--font-mono);
+	font-size: 0.85rem;
+	color: var(--accent-2);
+}
+
+.formError {
+	font-family: var(--font-mono);
+	font-size: 0.85rem;
+	color: var(--coral);
+}
+
+.formLoading {
+	font-family: var(--font-mono);
+	font-size: 0.85rem;
+	color: var(--text-faint);
+	padding: 40px;
+	text-align: center;
+}

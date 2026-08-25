@@ -1,0 +1,153 @@
+.experience {
+	padding: clamp(64px, 10vh, 120px) 32px;
+	border-top: 1px solid var(--border-hairline);
+}
+
+.inner {
+	max-width: var(--container);
+	margin: 0 auto;
+}
+
+.timeline {
+	position: relative;
+	padding-left: 28px;
+
+	&::before {
+		content: '';
+		position: absolute;
+		left: 5px;
+		top: 8px;
+		bottom: 8px;
+		width: 1px;
+		background: linear-gradient(var(--border-strong), var(--border-hairline));
+	}
+}
+
+.item {
+	position: relative;
+	list-style: none;
+
+	& + & {
+		margin-top: 40px;
+	}
+}
+
+.marker {
+	position: absolute;
+	left: -28px;
+	top: 6px;
+	width: 11px;
+	height: 11px;
+	border-radius: 50%;
+	background: var(--bg);
+	border: 2px solid var(--accent);
+}
+
+.compact .marker {
+	border-color: var(--border-strong);
+}
+
+.content {
+	padding: 24px 28px;
+	background: var(--bg-elevated);
+	border: 1px solid var(--border);
+	border-radius: var(--radius-md);
+}
+
+.featured .content {
+	background: var(--bg-elevated);
+}
+
+.compact .content {
+	background: transparent;
+	border-color: var(--border-hairline);
+	padding: 18px 24px;
+}
+
+.headRow {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 16px;
+	flex-wrap: wrap;
+	margin-bottom: 14px;
+}
+
+.role {
+	font-size: 1.15rem;
+	color: var(--text);
+	margin-bottom: 4px;
+}
+
+.compact .role {
+	font-size: 1.02rem;
+}
+
+.org {
+	font-family: var(--font-mono);
+	font-size: 0.82rem;
+	color: var(--accent-2);
+}
+
+.dates {
+	font-family: var(--font-mono);
+	font-size: 0.76rem;
+	color: var(--text-faint);
+	white-space: nowrap;
+	padding-top: 4px;
+}
+
+.stack {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin-bottom: 16px;
+
+	li {
+		font-family: var(--font-mono);
+		font-size: 0.72rem;
+		color: var(--text-dim);
+		background: var(--bg-elevated-2);
+		border: 1px solid var(--border);
+		padding: 4px 10px;
+		border-radius: 999px;
+	}
+}
+
+.bullets {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+
+	li {
+		position: relative;
+		padding-left: 18px;
+		color: var(--text-dim);
+		font-size: 0.94rem;
+		line-height: 1.6;
+
+		&::before {
+			content: '›';
+			position: absolute;
+			left: 0;
+			color: var(--accent);
+		}
+	}
+}
+
+.compact .bullets li {
+	font-size: 0.88rem;
+	color: var(--text-faint);
+}
+
+@media (max-width: 640px) {
+	.timeline {
+		padding-left: 20px;
+	}
+	.marker {
+		left: -20px;
+	}
+	.content {
+		padding: 18px 18px;
+	}
+}

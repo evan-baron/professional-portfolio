@@ -1,0 +1,44 @@
+.education {
+	padding: clamp(48px, 8vh, 96px) 32px;
+	border-top: 1px solid var(--border-hairline);
+}
+
+.inner {
+	max-width: var(--container);
+	margin: 0 auto;
+}
+
+.row {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 16px;
+	flex-wrap: wrap;
+	padding-bottom: 20px;
+	border-bottom: 1px solid var(--border-hairline);
+}
+
+.degree {
+	font-size: 1.1rem;
+	color: var(--text);
+	margin-bottom: 4px;
+}
+
+.school {
+	font-family: var(--font-mono);
+	font-size: 0.82rem;
+	color: var(--accent-2);
+}
+
+.year {
+	font-family: var(--font-mono);
+	font-size: 0.8rem;
+	color: var(--text-faint);
+}
+
+.note {
+	margin-top: 18px;
+	color: var(--text-faint);
+	font-size: 0.92rem;
+	max-width: 60ch;
+}
