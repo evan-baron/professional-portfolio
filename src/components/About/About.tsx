@@ -23,7 +23,7 @@ const About = () => {
 				<div className={styles.grid}>
 					<Reveal className={styles.bio} delay={0.05}>
 						<p>
-							I spent five years carrying enterprise SaaS quotas before I ever
+							I spent ten years carrying enterprise SaaS quotas before I ever
 							shipped a line of production code, closing seven-figure deals,
 							writing the playbooks other reps ran on, and translating dense
 							technical capability into business value for executives. Somewhere
