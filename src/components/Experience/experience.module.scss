@@ -143,6 +143,12 @@
 		border: 1px solid var(--border);
 		padding: 4px 10px;
 		border-radius: 999px;
+
+		@media (hover: hover) {
+			&:hover {
+				filter: brightness(1.5);
+			}
+		}
 	}
 }
 
