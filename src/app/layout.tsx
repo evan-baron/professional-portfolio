@@ -24,14 +24,14 @@ const publicSans = Public_Sans({
 
 export const metadata: Metadata = {
 	metadataBase: new URL('https://evanbaron.dev'),
-	title: 'Evan Baron — Full-Stack Engineer',
+	title: 'Evan Baron | Full-Stack Engineer',
 	description:
 		'Full-stack engineer building production web applications end-to-end with Next.js, React, TypeScript, and PostgreSQL.',
 	icons: {
 		icon: '/favicon.svg',
 	},
 	openGraph: {
-		title: 'Evan Baron — Full-Stack Engineer',
+		title: 'Evan Baron | Full-Stack Engineer',
 		description:
 			'Full-stack engineer building production web applications end-to-end with Next.js, React, TypeScript, and PostgreSQL.',
 		type: 'website',

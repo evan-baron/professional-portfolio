@@ -10,15 +10,17 @@ const Education = () => {
 
 				<Reveal className={styles.row}>
 					<div>
-						<h3 className={styles.degree}>Bachelor of Science, Business Marketing</h3>
-						<p className={styles.school}>University of Colorado — Denver</p>
+						<h3 className={styles.degree}>
+							Bachelor of Science, Business Marketing
+						</h3>
+						<p className={styles.school}>University of Colorado, Denver</p>
 					</div>
 					<span className={styles.year}>2014</span>
 				</Reveal>
 
 				<Reveal delay={0.08} className={styles.note}>
-					The engineering skill set came after — self-directed, project-driven, and
-					stress-tested in production rather than in a classroom.
+					The engineering skill set came after. Self-directed, project-driven,
+					and stress-tested in production rather than in a classroom.
 				</Reveal>
 			</div>
 		</section>

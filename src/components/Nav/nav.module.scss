@@ -112,10 +112,11 @@
 	padding: 8px 16px;
 	border-radius: var(--radius-sm);
 	white-space: nowrap;
-	transition: transform 0.2s var(--ease-out), background 0.2s;
+	transition: transform 0.2s var(--ease-out), filter 0.2s, box-shadow 0.2s;
 
 	&:hover {
-		background: #ffc670;
+		filter: brightness(1.12);
+		box-shadow: 0 8px 20px -8px var(--accent-soft-strong);
 		transform: translateY(-1px);
 	}
 

@@ -6,11 +6,18 @@ export type SkillGroup = {
 const skills: SkillGroup[] = [
 	{
 		label: 'Languages',
-		items: ['TypeScript', 'JavaScript', 'SCSS', 'SQL'],
+		items: ['TypeScript', 'JavaScript', 'CSS', 'SCSS', 'SQL'],
 	},
 	{
 		label: 'Frameworks',
-		items: ['React', 'Next.js', 'Node.js', 'Express.js', 'Redux', 'Tailwind CSS'],
+		items: [
+			'React',
+			'Next.js',
+			'Node.js',
+			'Express.js',
+			'Redux',
+			'Tailwind CSS',
+		],
 	},
 	{
 		label: 'Databases',
@@ -28,9 +35,11 @@ const skills: SkillGroup[] = [
 			'Cloudinary',
 			'OAuth',
 			'Auth0',
-			'TanStack Query',
 			'Zod',
+			'TanStack Query',
 			'Bootstrap',
+			'Shadcn',
+			'MUI',
 			'Sanity.io',
 		],
 	},

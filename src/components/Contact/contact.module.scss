@@ -118,11 +118,12 @@
 	color: var(--bg);
 	padding: 13px 20px;
 	border-radius: var(--radius-sm);
-	transition: background 0.2s, transform 0.2s var(--ease-out);
+	transition: filter 0.2s, box-shadow 0.2s, transform 0.2s var(--ease-out);
 	align-self: flex-start;
 
 	&:hover:not(:disabled) {
-		background: #ffc670;
+		filter: brightness(1.12);
+		box-shadow: 0 10px 24px -8px var(--accent-soft-strong);
 		transform: translateY(-2px);
 	}
 

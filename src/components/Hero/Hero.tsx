@@ -21,7 +21,7 @@ const Hero = () => {
 						Evan <em>Baron</em>
 					</h1>
 					<p className={styles.tagline}>
-						I build production web applications end-to-end — from schema design to
+						I build production web applications end-to-end, from schema design to
 						the pixels you click. Formerly enterprise SaaS sales, now shipping
 						Next.js and TypeScript for a living.
 					</p>
@@ -82,8 +82,10 @@ const Hero = () => {
 							<span className={styles.ln}>3</span>
 							{'  '}
 							<span className={styles.prop}>role</span>:{' '}
-							<span className={styles.str}>&apos;Full-Stack Engineer&apos;</span>,
-							{'\n'}
+							<span className={styles.str}>
+								&apos;Full-Stack Engineer&apos;
+							</span>
+							,{'\n'}
 							<span className={styles.ln}>4</span>
 							{'  '}
 							<span className={styles.prop}>stack</span>: [
@@ -96,8 +98,10 @@ const Hero = () => {
 							<span className={styles.ln}>6</span>
 							{'  '}
 							<span className={styles.prop}>focus</span>:{' '}
-							<span className={styles.str}>&apos;end-to-end ownership&apos;</span>,
-							{'\n'}
+							<span className={styles.str}>
+								&apos;end-to-end ownership&apos;
+							</span>
+							,{'\n'}
 							<span className={styles.ln}>7</span>
 							{'  '}
 							<span className={styles.prop}>available</span>:{' '}
@@ -110,7 +114,11 @@ const Hero = () => {
 				</motion.div>
 			</div>
 
-			<a href='#about' className={styles.scrollCue} aria-label='Scroll to about section'>
+			<a
+				href='#about'
+				className={styles.scrollCue}
+				aria-label='Scroll to about section'
+			>
 				<FiArrowDown />
 			</a>
 		</section>

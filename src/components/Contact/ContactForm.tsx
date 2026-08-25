@@ -212,7 +212,7 @@ const ContactForm = () => {
 
 			<div aria-live='polite'>
 				{status === 'success' && (
-					<p className={styles.success}>Message sent — I&apos;ll get back to you soon.</p>
+					<p className={styles.success}>Message sent. I&apos;ll get back to you soon.</p>
 				)}
 				{status === 'error' && <p className={styles.formError}>{errorMessage}</p>}
 			</div>

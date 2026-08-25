@@ -43,6 +43,18 @@ const Experience = () => {
 							</div>
 						</Reveal>
 					))}
+
+					<Reveal
+						as='li'
+						delay={experience.length * 0.06}
+						className={styles.item}
+					>
+						<div className={`${styles.marker} ${styles.ghostMarker}`} aria-hidden='true' />
+						<div className={styles.ghostContent} aria-hidden='true' />
+						<span className='sr-only'>
+							Plus additional prior experience not itemized here.
+						</span>
+					</Reveal>
 				</ol>
 			</div>
 		</section>
