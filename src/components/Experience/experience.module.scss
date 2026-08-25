@@ -26,6 +26,37 @@
 	}
 }
 
+// A plain-text break between the pre/post career-switch groups — this is
+// what actually explains the visual weight difference below, rather than
+// leaving it as an unexplained style change.
+.divider {
+	position: relative;
+	list-style: none;
+	display: flex;
+	align-items: center;
+	gap: 14px;
+	margin: 0 0 28px;
+
+	&:not(:first-child) {
+		margin-top: 42px;
+	}
+}
+
+.dividerLabel {
+	font-family: var(--font-mono);
+	font-size: 0.74rem;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	color: var(--accent);
+	white-space: nowrap;
+}
+
+.dividerLine {
+	flex: 1;
+	height: 1px;
+	background: var(--border-strong);
+}
+
 .item {
 	position: relative;
 	list-style: none;
@@ -35,6 +66,10 @@
 	}
 }
 
+// Resting state is the dim/compact treatment for every entry — the bold
+// "featured" look is no longer a permanent property of certain roles, it's
+// what a card looks like under your cursor (desktop) or always (touch,
+// where there's no hover to reveal it).
 .marker {
 	position: absolute;
 	left: -28px;
@@ -43,34 +78,25 @@
 	height: 12px;
 	border-radius: 50%;
 	background: var(--bg);
-	border: 2px solid var(--accent);
-	box-shadow: 0 0 0 4px var(--accent-soft);
-}
-
-.compact .marker {
-	border-color: var(--border-strong);
-}
-
-.content {
-	padding: 26px 30px;
-	background: var(--bg-elevated);
-	border: 1px solid var(--border);
-	border-radius: var(--radius-md);
+	border: 2px solid var(--border-strong);
+	box-shadow: 0 0 0 0 transparent;
 	transition:
 		border-color 0.2s,
 		box-shadow 0.2s;
 	will-change: border-color, box-shadow;
 }
 
-.featured .content {
-	background: var(--bg-elevated);
-	border-top: 2px solid var(--accent-dim);
-}
-
-.compact .content {
-	background: transparent;
-	border-color: var(--border-hairline);
+.content {
 	padding: 18px 24px;
+	background: transparent;
+	border: 1px solid var(--border-hairline);
+	border-radius: var(--radius-md);
+	transition:
+		background 0.2s,
+		border-color 0.2s,
+		padding 0.2s,
+		box-shadow 0.2s;
+	will-change: background, border-color, box-shadow;
 }
 
 .headRow {
@@ -83,13 +109,10 @@
 }
 
 .role {
-	font-size: 1.22rem;
+	font-size: 1.02rem;
 	color: var(--text);
 	margin-bottom: 4px;
-}
-
-.compact .role {
-	font-size: 1.02rem;
+	transition: font-size 0.2s;
 }
 
 .org {
@@ -131,9 +154,12 @@
 	li {
 		position: relative;
 		padding-left: 18px;
-		color: var(--text-dim);
-		font-size: 0.94rem;
+		color: var(--text-faint);
+		font-size: 0.88rem;
 		line-height: 1.6;
+		transition:
+			color 0.2s,
+			font-size 0.2s;
 
 		&::before {
 			content: '›';
@@ -144,9 +170,46 @@
 	}
 }
 
-.compact .bullets li {
-	font-size: 0.88rem;
-	color: var(--text-faint);
+// The "bright" treatment: revealed on hover for pointer devices, and on by
+// default for touch devices, which have no hover state to reveal it with.
+@media (hover: hover) {
+	.item:hover .marker {
+		border-color: var(--accent);
+		box-shadow: 0 0 0 4px var(--accent-soft);
+	}
+
+	.item:hover .content {
+		background: var(--bg-elevated);
+		border-color: var(--border);
+		border-top: 2px solid var(--accent-dim);
+	}
+
+	.item:hover .bullets li {
+		color: var(--text-dim);
+	}
+}
+
+@media (hover: none) {
+	.marker {
+		border-color: var(--accent);
+		box-shadow: 0 0 0 4px var(--accent-soft);
+	}
+
+	.content {
+		padding: 26px 30px;
+		background: var(--bg-elevated);
+		border-color: var(--border);
+		border-top: 2px solid var(--accent-dim);
+	}
+
+	.role {
+		font-size: 1.22rem;
+	}
+
+	.bullets li {
+		color: var(--text-dim);
+		font-size: 0.94rem;
+	}
 }
 
 // --- closing note: gestures at unlisted prior experience without a fake entry ---
@@ -162,9 +225,6 @@
 	font-size: 0.82rem;
 	font-style: italic;
 	line-height: 1.6;
-	// color: #6f8f6a;
-	// color: var(--accent);
-	// opacity: 0.75;
 	color: var(--text-faint);
 }
 
@@ -177,5 +237,11 @@
 	}
 	.content {
 		padding: 18px 18px;
+	}
+
+	@media (hover: none) {
+		.content {
+			padding: 22px 18px;
+		}
 	}
 }

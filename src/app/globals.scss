@@ -25,7 +25,12 @@
 	--accent-dim: #d97a2a;
 	--accent-soft: rgba(255, 157, 77, 0.14);
 	--accent-soft-strong: rgba(255, 157, 77, 0.28);
-	--accent-gradient: linear-gradient(135deg, #ff6a5a 0%, #ff9d4d 55%, #ffc157 100%);
+	--accent-gradient: linear-gradient(
+		135deg,
+		#ff6a5a 0%,
+		#ff9d4d 55%,
+		#ffc157 100%
+	);
 
 	--accent-2: #52e3c2;
 	--accent-2-soft: rgba(82, 227, 194, 0.14);
@@ -175,10 +180,10 @@ body::before {
 	pointer-events: none;
 	background-image:
 		linear-gradient(var(--border-hairline) 1px, transparent 1px),
-		linear-gradient(90deg, var(--border-hairline) 1px, transparent 1px),
-		radial-gradient(ellipse 60% 45% at 85% 8%, rgba(255, 157, 77, 0.16), transparent 70%),
-		radial-gradient(ellipse 50% 40% at 8% 28%, rgba(82, 227, 194, 0.1), transparent 72%);
-	background-size: 64px 64px, 64px 64px, 100% 100%, 100% 100%;
+		linear-gradient(90deg, var(--border-hairline) 1px, transparent 1px);
+	background-size:
+		64px 64px,
+		64px 64px;
 	mask-image: radial-gradient(
 		ellipse 90% 60% at 50% 0%,
 		black 40%,
