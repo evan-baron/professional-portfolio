@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 import styles from './nav.module.scss';
 
 const LINKS = [
@@ -31,26 +32,26 @@ const Nav = () => {
 	return (
 		<header className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
 			<div className={styles.inner}>
-				<a href='#top' className={styles.logo} aria-label='Evan Baron, home'>
+				<Link href='#top' className={styles.logo} aria-label='Evan Baron, home'>
 					<span className={styles.logoMark}>EB</span>
 					<span className={styles.logoStatus}>
 						<span className={styles.dot} aria-hidden='true' />
 						available for work
 					</span>
-				</a>
+				</Link>
 
 				<nav className={styles.links} aria-label='Primary'>
 					{LINKS.map((link, i) => (
-						<a key={link.href} href={link.href} className={styles.link}>
+						<Link key={link.href} href={link.href} className={styles.link}>
 							<span className={styles.linkIndex}>0{i + 1}</span>
 							{link.label}
-						</a>
+						</Link>
 					))}
 				</nav>
 
-				<a href='#contact' className={styles.cta}>
+				<Link href='#contact' className={styles.cta}>
 					Get in touch
-				</a>
+				</Link>
 
 				<button
 					type='button'
@@ -66,10 +67,15 @@ const Nav = () => {
 			<div className={`${styles.mobileMenu} ${open ? styles.mobileMenuOpen : ''}`}>
 				<nav aria-label='Mobile'>
 					{LINKS.map((link, i) => (
-						<a key={link.href} href={link.href} className={styles.mobileLink} onClick={handleNavClick}>
+						<Link
+							key={link.href}
+							href={link.href}
+							className={styles.mobileLink}
+							onClick={handleNavClick}
+						>
 							<span className={styles.linkIndex}>0{i + 1}</span>
 							{link.label}
-						</a>
+						</Link>
 					))}
 				</nav>
 			</div>

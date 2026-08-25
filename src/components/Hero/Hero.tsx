@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'motion/react';
+import Link from 'next/link';
 import { FiArrowDown, FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
 import styles from './hero.module.scss';
 
@@ -27,34 +28,34 @@ const Hero = () => {
 					</p>
 
 					<div className={styles.actions}>
-						<a href='#projects' className={styles.primaryCta}>
+						<Link href='#projects' className={styles.primaryCta}>
 							View projects
-						</a>
-						<a href='#contact' className={styles.secondaryCta}>
+						</Link>
+						<Link href='#contact' className={styles.secondaryCta}>
 							Get in touch
-						</a>
+						</Link>
 					</div>
 
 					<div className={styles.social}>
-						<a
+						<Link
 							href='https://github.com/evan-baron'
 							target='_blank'
 							rel='noreferrer noopener'
 							aria-label='GitHub'
 						>
 							<FiGithub />
-						</a>
-						<a
+						</Link>
+						<Link
 							href='https://linkedin.com/in/evangbaron'
 							target='_blank'
 							rel='noreferrer noopener'
 							aria-label='LinkedIn'
 						>
 							<FiLinkedin />
-						</a>
-						<a href='mailto:egbaron@gmail.com' aria-label='Email'>
+						</Link>
+						<Link href='mailto:egbaron@gmail.com' aria-label='Email'>
 							<FiMail />
-						</a>
+						</Link>
 					</div>
 				</motion.div>
 
@@ -114,13 +115,13 @@ const Hero = () => {
 				</motion.div>
 			</div>
 
-			<a
+			<Link
 				href='#about'
 				className={styles.scrollCue}
 				aria-label='Scroll to about section'
 			>
 				<FiArrowDown />
-			</a>
+			</Link>
 		</section>
 	);
 };

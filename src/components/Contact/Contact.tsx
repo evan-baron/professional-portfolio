@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { FiGithub, FiLinkedin, FiMail, FiPhone } from 'react-icons/fi';
 import SectionHeading from '../SectionHeading/SectionHeading';
 import Reveal from '../Reveal/Reveal';
@@ -23,23 +24,31 @@ const Contact = () => {
 						<ul className={styles.details}>
 							<li>
 								<FiMail aria-hidden='true' />
-								<a href='mailto:egbaron@gmail.com'>egbaron@gmail.com</a>
+								<Link href='mailto:egbaron@gmail.com'>egbaron@gmail.com</Link>
 							</li>
 							<li>
 								<FiPhone aria-hidden='true' />
-								<a href='tel:+13035883117'>303-588-3117</a>
+								<Link href='tel:+13035883117'>303-588-3117</Link>
 							</li>
 							<li>
 								<FiLinkedin aria-hidden='true' />
-								<a href='https://linkedin.com/in/evangbaron' target='_blank' rel='noreferrer noopener'>
+								<Link
+									href='https://linkedin.com/in/evangbaron'
+									target='_blank'
+									rel='noreferrer noopener'
+								>
 									linkedin.com/in/evangbaron
-								</a>
+								</Link>
 							</li>
 							<li>
 								<FiGithub aria-hidden='true' />
-								<a href='https://github.com/evan-baron' target='_blank' rel='noreferrer noopener'>
+								<Link
+									href='https://github.com/evan-baron'
+									target='_blank'
+									rel='noreferrer noopener'
+								>
 									github.com/evan-baron
-								</a>
+								</Link>
 							</li>
 						</ul>
 					</Reveal>

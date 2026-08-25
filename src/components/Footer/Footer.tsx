@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
 import styles from './footer.module.scss';
 
@@ -12,25 +13,30 @@ const Footer = () => {
 				</p>
 
 				<div className={styles.links}>
-					<a href='https://github.com/evan-baron' target='_blank' rel='noreferrer noopener' aria-label='GitHub'>
+					<Link
+						href='https://github.com/evan-baron'
+						target='_blank'
+						rel='noreferrer noopener'
+						aria-label='GitHub'
+					>
 						<FiGithub />
-					</a>
-					<a
+					</Link>
+					<Link
 						href='https://linkedin.com/in/evangbaron'
 						target='_blank'
 						rel='noreferrer noopener'
 						aria-label='LinkedIn'
 					>
 						<FiLinkedin />
-					</a>
-					<a href='mailto:egbaron@gmail.com' aria-label='Email'>
+					</Link>
+					<Link href='mailto:egbaron@gmail.com' aria-label='Email'>
 						<FiMail />
-					</a>
+					</Link>
 				</div>
 
-				<a href='#top' className={styles.toTop}>
+				<Link href='#top' className={styles.toTop}>
 					Back to top ↑
-				</a>
+				</Link>
 			</div>
 		</footer>
 	);

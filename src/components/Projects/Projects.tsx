@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import projects from '@/lib/data/projects';
 import SectionHeading from '../SectionHeading/SectionHeading';
 import Reveal from '../Reveal/Reveal';
@@ -15,19 +16,16 @@ const Projects = () => {
 				<div className={styles.grid}>
 					{projects.map((project, i) => (
 						<Reveal key={project.name} delay={i * 0.08}>
-							<a
+							<Link
 								href={project.href}
 								target='_blank'
 								rel='noreferrer noopener'
 								className={`${styles.card} ${styles[accents[i % accents.length]]}`}
 							>
 								<div className={styles.cardHead}>
-									<div>
-										<h3 className={styles.name}>{project.name}</h3>
-										<p className={styles.tagline}>{project.tagline}</p>
-									</div>
-									<span className={styles.dates}>{project.dates}</span>
+									<h3 className={styles.name}>{project.name}</h3>
 								</div>
+								<p className={styles.tagline}>{project.tagline}</p>
 
 								<ul className={styles.bullets}>
 									{project.bullets.map((bullet) => (
@@ -46,7 +44,7 @@ const Projects = () => {
 									<FiArrowUpRight />
 									<span className='sr-only'> (opens in a new tab)</span>
 								</span>
-							</a>
+							</Link>
 						</Reveal>
 					))}
 				</div>

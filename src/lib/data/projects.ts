@@ -1,7 +1,6 @@
 export type Project = {
 	name: string;
 	tagline: string;
-	dates: string;
 	stack: string[];
 	bullets: string[];
 	href: string;
@@ -12,7 +11,6 @@ const projects: Project[] = [
 	{
 		name: 'Repliably',
 		tagline: 'Email automation & customer engagement platform',
-		dates: 'Dec 2024 – Present',
 		stack: [
 			'Next.js',
 			'React',
@@ -39,8 +37,15 @@ const projects: Project[] = [
 	{
 		name: 'YoyoCollector.com',
 		tagline: 'Collection management database platform',
-		dates: 'Jan 2025 – Present',
-		stack: ['Next.js', 'React', 'TypeScript', 'SCSS', 'MySQL', 'Railway', 'Netlify'],
+		stack: [
+			'Next.js',
+			'React',
+			'TypeScript',
+			'SCSS',
+			'MySQL',
+			'Railway',
+			'Netlify',
+		],
 		bullets: [
 			'Full-stack collection management platform with authentication, dynamic data retrieval, and public sharing, with iterative improvements shipped through direct end-user collaboration.',
 			'Designed a normalized MySQL schema supporting complex joins, real-time operations, and user-scoped data views; optimized queries as data volume grew.',
@@ -51,7 +56,6 @@ const projects: Project[] = [
 	{
 		name: 'Retcon Consulting',
 		tagline: 'Digital consulting services web application',
-		dates: 'Apr 2025 – Present',
 		stack: ['Next.js', 'React', 'TypeScript', 'SCSS', 'Netlify', 'Railway'],
 		bullets: [
 			'Performance-optimized marketing site with custom animations, full SEO implementation, and complete UI/UX ownership from concept to production.',

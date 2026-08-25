@@ -140,22 +140,6 @@
 	color: var(--text-faint);
 }
 
-// --- ghost entry: hints at unlisted prior experience without stating one ---
-
-.ghostMarker {
-	border: 1px dashed var(--border-hairline);
-	background: transparent;
-	opacity: 0.6;
-}
-
-.ghostContent {
-	height: 80px;
-	border: 1px dashed var(--border-hairline);
-	border-radius: var(--radius-md);
-	-webkit-mask-image: linear-gradient(to bottom, black, transparent);
-	mask-image: linear-gradient(to bottom, black, transparent);
-}
-
 @media (max-width: 640px) {
 	.timeline {
 		padding-left: 20px;
@@ -165,11 +149,5 @@
 	}
 	.content {
 		padding: 18px 18px;
-	}
-	.ghostMarker {
-		display: none;
-	}
-	.ghostContent {
-		display: none;
 	}
 }
