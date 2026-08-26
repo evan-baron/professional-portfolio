@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { FiGithub, FiLinkedin, FiMail, FiPhone } from 'react-icons/fi';
+import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
 import SectionHeading from '../SectionHeading/SectionHeading';
 import Reveal from '../Reveal/Reveal';
 import ContactForm from './ContactForm';
@@ -13,9 +13,9 @@ const Contact = () => {
 
 				<div className={styles.grid}>
 					<Reveal className={styles.intro}>
-						<h2 className={styles.heading}>
+						<h3 className={styles.heading}>
 							Have a project in mind, or just want to talk shop?
-						</h2>
+						</h3>
 						<p className={styles.subtext}>
 							I&apos;m open to full-stack roles and select contract work. Reach
 							out directly or send a message and I&apos;ll respond within a day

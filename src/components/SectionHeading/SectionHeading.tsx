@@ -10,10 +10,12 @@ type SectionHeadingProps = {
 const SectionHeading = ({ index, title, kicker }: SectionHeadingProps) => {
 	return (
 		<Reveal className={styles.wrap}>
-			<p className={styles.comment}>
-				<span className={styles.index}>{index}</span>
+			<h2 className={styles.comment}>
+				<span className={styles.index} aria-hidden='true'>
+					{index}
+				</span>
 				{title}
-			</p>
+			</h2>
 			<div className={styles.rule} aria-hidden='true' />
 			{kicker && <p className={styles.kicker}>{kicker}</p>}
 		</Reveal>

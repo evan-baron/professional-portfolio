@@ -16,10 +16,10 @@
 .copy {
 	font-family: var(--font-mono);
 	font-size: 0.76rem;
-	color: var(--text-faint);
+	color: var(--text-dim);
 
 	span {
-		color: var(--text-faint);
+		color: var(--text-dim);
 	}
 }
 
@@ -28,7 +28,7 @@
 	gap: 16px;
 
 	a {
-		color: var(--text-faint);
+		color: var(--text-dim);
 		font-size: 1rem;
 		transition:
 			color 0.2s,
@@ -47,7 +47,7 @@
 .toTop {
 	font-family: var(--font-mono);
 	font-size: 0.76rem;
-	color: var(--text-faint);
+	color: var(--text-dim);
 	transition: color 0.2s;
 	will-change: color;
 
