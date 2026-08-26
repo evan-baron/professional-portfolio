@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import styles from './nav.module.scss';
 
@@ -15,6 +15,7 @@ const LINKS = [
 const Nav = () => {
 	const [open, setOpen] = useState(false);
 	const [scrolled, setScrolled] = useState(false);
+	const navRef = useRef<HTMLElement>(null);
 
 	useEffect(() => {
 		const onScroll = () => setScrolled(window.scrollY > 8);
@@ -27,10 +28,26 @@ const Nav = () => {
 		document.documentElement.style.overflow = open ? 'hidden' : '';
 	}, [open]);
 
+	useEffect(() => {
+		if (!open) return;
+
+		const handleClickOutside = (e: PointerEvent) => {
+			if (navRef.current && !navRef.current.contains(e.target as Node)) {
+				setOpen(false);
+			}
+		};
+
+		document.addEventListener('pointerdown', handleClickOutside);
+		return () => document.removeEventListener('pointerdown', handleClickOutside);
+	}, [open]);
+
 	const handleNavClick = () => setOpen(false);
 
 	return (
-		<header className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
+		<header
+			ref={navRef}
+			className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}
+		>
 			<div className={styles.inner}>
 				<Link href='#top' className={styles.logo} aria-label='Evan Baron, home'>
 					<span className={styles.logoMark}>EB</span>

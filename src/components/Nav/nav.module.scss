@@ -221,13 +221,21 @@
 }
 
 .mobileMenu {
+	opacity: 0;
 	max-height: 0;
 	overflow: hidden;
 	border-bottom: 1px solid transparent;
 	transition:
-		max-height 0.35s var(--ease-out),
-		border-color 0.3s;
-	will-change: max-height, border-color;
+		opacity 0.35s ease-in-out,
+		max-height 0.35s ease-in-out,
+		border-color 0.35s;
+	will-change: opacity, max-height, border-color;
+	background: rgb(10, 12, 15);
+	position: absolute;
+	top: 77.5px;
+	left: 0;
+	width: 100%;
+	filter: drop-shadow(0px 1rem 0.5rem black);
 
 	nav {
 		display: flex;
@@ -241,6 +249,7 @@
 }
 
 .mobileMenuOpen {
+	opacity: 1;
 	max-height: 400px;
 	border-bottom-color: var(--border);
 }
@@ -249,11 +258,15 @@
 	font-family: var(--font-mono);
 	font-size: 1rem;
 	color: var(--text-dim);
-	padding: 12px 0;
+	padding: 1.25rem 0;
 	border-bottom: 1px solid var(--border-hairline);
 	display: flex;
 	align-items: center;
 	gap: 10px;
+
+	&:last-child {
+		border: none;
+	}
 
 	@media (hover: hover) {
 		&:hover {
