@@ -24,7 +24,7 @@ const Hero = () => {
 					<p className={styles.tagline}>
 						I build production web applications end-to-end, from schema design
 						to the pixels you click. Formerly enterprise SaaS sales, now
-						shipping Next.js and TypeScript for a living.
+						shipping code for a living.
 					</p>
 
 					<div className={styles.actions}>
