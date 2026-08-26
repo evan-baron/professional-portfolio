@@ -30,7 +30,7 @@
 	height: 2.25rem;
 	flex-shrink: 0;
 	border-radius: 50%;
-	border: 1.5px solid var(--text-faint);
+	border: 1.5px solid var(--text-dim);
 	transition:
 		border-color 0.2s,
 		box-shadow 0.2s;
@@ -39,7 +39,7 @@
 	.icon {
 		width: 1.75rem;
 		height: 1.75rem;
-		color: var(--text-faint);
+		color: var(--text-dim);
 		transition: color 0.2s;
 		will-change: color;
 	}
