@@ -79,10 +79,12 @@
 		box-shadow 0.2s;
 	will-change: transform, filter, box-shadow;
 
-	&:hover {
-		filter: brightness(1.08) saturate(1.1);
-		box-shadow: var(--glow-accent-lg);
-		transform: translateY(-2px);
+	@media (hover: hover) {
+		&:hover {
+			filter: brightness(1.08) saturate(1.1);
+			box-shadow: var(--glow-accent-lg);
+			transform: translateY(-2px);
+		}
 	}
 }
 
@@ -100,11 +102,13 @@
 		background 0.2s;
 	will-change: border-color, transform, background;
 
-	&:hover {
-		border-color: var(--accent);
-		background: var(--accent-soft);
-		box-shadow: 0 8px 24px -14px var(--accent-soft-strong);
-		transform: translateY(-2px);
+	@media (hover: hover) {
+		&:hover {
+			border-color: var(--accent);
+			background: var(--accent-soft);
+			box-shadow: 0 8px 24px -14px var(--accent-soft-strong);
+			transform: translateY(-2px);
+		}
 	}
 }
 
@@ -129,11 +133,13 @@
 			transform 0.2s var(--ease-out);
 		will-change: color, border-color, box-shadow, transform;
 
-		&:hover {
-			color: var(--accent);
-			border-color: var(--accent-dim);
-			box-shadow: 0 0 0 4px var(--accent-soft);
-			transform: translateY(-2px);
+		@media (hover: hover) {
+			&:hover {
+				color: var(--accent);
+				border-color: var(--accent-dim);
+				box-shadow: 0 0 0 4px var(--accent-soft);
+				transform: translateY(-2px);
+			}
 		}
 	}
 }

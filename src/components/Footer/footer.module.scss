@@ -35,9 +35,11 @@
 			filter 0.2s;
 		will-change: color, filter;
 
-		&:hover {
-			color: var(--accent);
-			filter: drop-shadow(0 0 8px var(--accent-soft-strong));
+		@media (hover: hover) {
+			&:hover {
+				color: var(--accent);
+				filter: drop-shadow(0 0 8px var(--accent-soft-strong));
+			}
 		}
 	}
 }
@@ -49,8 +51,10 @@
 	transition: color 0.2s;
 	will-change: color;
 
-	&:hover {
-		color: var(--text);
+	@media (hover: hover) {
+		&:hover {
+			color: var(--text);
+		}
 	}
 }
 

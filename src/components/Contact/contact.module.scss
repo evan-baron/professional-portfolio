@@ -50,8 +50,10 @@
 		}
 	}
 
-	a:hover {
-		color: var(--text);
+	@media (hover: hover) {
+		a:hover {
+			color: var(--text);
+		}
 	}
 }
 
@@ -143,10 +145,12 @@
 	will-change: filter, box-shadow, transform;
 	align-self: flex-start;
 
-	&:hover:not(:disabled) {
-		filter: brightness(1.08) saturate(1.1);
-		box-shadow: var(--glow-accent-lg);
-		transform: translateY(-2px);
+	@media (hover: hover) {
+		&:hover:not(:disabled) {
+			filter: brightness(1.08) saturate(1.1);
+			box-shadow: var(--glow-accent-lg);
+			transform: translateY(-2px);
+		}
 	}
 
 	&:disabled {

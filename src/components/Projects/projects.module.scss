@@ -48,14 +48,16 @@
 		will-change: opacity;
 	}
 
-	&:hover {
-		transform: translateY(-5px);
-		box-shadow:
-			0 24px 48px -24px rgba(0, 0, 0, 0.55),
-			0 0 44px -20px var(--card-accent-soft);
+	@media (hover: hover) {
+		&:hover {
+			transform: translateY(-5px);
+			box-shadow:
+				0 24px 48px -24px rgba(0, 0, 0, 0.55),
+				0 0 44px -20px var(--card-accent-soft);
 
-		&::before {
-			opacity: 1;
+			&::before {
+				opacity: 1;
+			}
 		}
 	}
 }
@@ -173,7 +175,9 @@
 	will-change: color, border-color;
 }
 
-.card:hover .link {
-	color: var(--card-accent);
-	border-color: var(--card-accent);
+@media (hover: hover) {
+	.card:hover .link {
+		color: var(--card-accent);
+		border-color: var(--card-accent);
+	}
 }

@@ -48,13 +48,11 @@ const About = () => {
 
 					<div className={styles.stats}>
 						{stats.map((stat, i) => (
-							<Reveal
-								key={stat.label}
-								delay={0.1 + i * 0.08}
-								className={styles.stat}
-							>
-								<span className={styles.statValue}>{stat.value}</span>
-								<span className={styles.statLabel}>{stat.label}</span>
+							<Reveal key={stat.label} delay={0.1 + i * 0.08}>
+								<div className={styles.stat}>
+									<span className={styles.statValue}>{stat.value}</span>
+									<span className={styles.statLabel}>{stat.label}</span>
+								</div>
 							</Reveal>
 						))}
 					</div>

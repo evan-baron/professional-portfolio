@@ -48,10 +48,12 @@
 		transform 0.2s var(--ease-out);
 	will-change: color, border-color, box-shadow, transform;
 
-	&:hover {
-		color: var(--text);
-		border-color: var(--accent-dim);
-		box-shadow: 0 0 0 3px var(--accent-soft);
-		transform: translateY(-2px);
+	@media (hover: hover) {
+		&:hover {
+			color: var(--text);
+			border-color: var(--accent-dim);
+			box-shadow: 0 0 0 3px var(--accent-soft);
+			transform: translateY(-2px);
+		}
 	}
 }

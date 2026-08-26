@@ -47,9 +47,11 @@
 	will-change: border-color, box-shadow;
 }
 
-.logo:hover .logoMark {
-	border-color: var(--accent-dim);
-	box-shadow: 0 0 0 3px var(--accent-soft);
+@media (hover: hover) {
+	.logo:hover .logoMark {
+		border-color: var(--accent-dim);
+		box-shadow: 0 0 0 3px var(--accent-soft);
+	}
 }
 
 .logoStatus {
@@ -123,11 +125,13 @@
 		will-change: right;
 	}
 
-	&:hover {
-		color: var(--text);
+	@media (hover: hover) {
+		&:hover {
+			color: var(--text);
 
-		&::after {
-			right: 0;
+			&::after {
+				right: 0;
+			}
 		}
 	}
 }
@@ -152,10 +156,12 @@
 		box-shadow 0.2s;
 	will-change: transform, filter, box-shadow;
 
-	&:hover {
-		filter: brightness(1.08) saturate(1.1);
-		box-shadow: var(--glow-accent);
-		transform: translateY(-1px);
+	@media (hover: hover) {
+		&:hover {
+			filter: brightness(1.08) saturate(1.1);
+			box-shadow: var(--glow-accent);
+			transform: translateY(-1px);
+		}
 	}
 
 	@media (max-width: 900px) {
@@ -249,7 +255,9 @@
 	align-items: center;
 	gap: 10px;
 
-	&:hover {
-		color: var(--text);
+	@media (hover: hover) {
+		&:hover {
+			color: var(--text);
+		}
 	}
 }
