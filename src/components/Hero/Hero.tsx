@@ -111,7 +111,7 @@ const Hero = () => {
 							<span className={styles.prop}>available</span>:{' '}
 							<span className={styles.bool}>true</span>,{'\n'}
 							<span className={styles.ln}>9</span>
-							{'}'}
+							{'};'}
 							<span className={styles.cursor} aria-hidden='true' />
 						</code>
 					</pre>
