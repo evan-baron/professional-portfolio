@@ -7,10 +7,12 @@ import Projects from '@/components/Projects/Projects';
 import Education from '@/components/Education/Education';
 import Contact from '@/components/Contact/Contact';
 import Footer from '@/components/Footer/Footer';
+import BackgroundEffect from '@/components/Background/BackgroundEffect';
 
 export default function Home() {
 	return (
 		<>
+			<BackgroundEffect />
 			<Nav />
 			<main>
 				<Hero />

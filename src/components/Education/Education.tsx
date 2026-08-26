@@ -19,8 +19,9 @@ const Education = () => {
 				</Reveal>
 
 				<Reveal delay={0.08} className={styles.note}>
-					The engineering skill set came after. Self-directed, project-driven,
-					and stress-tested in production rather than in a classroom.
+					/* The engineering skill set came after. Self-directed,
+					project-driven, and stress-tested in production rather than in a
+					classroom. */
 				</Reveal>
 			</div>
 		</section>

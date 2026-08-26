@@ -60,9 +60,16 @@
 .item {
 	position: relative;
 	list-style: none;
+	background: var(--bg-elevated);
+	border-color: var(--border);
 
 	& + & {
 		margin-top: 40px;
+	}
+
+	&:last-child {
+		background: transparent;
+		border: none;
 	}
 }
 

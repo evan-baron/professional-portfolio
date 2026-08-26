@@ -172,25 +172,25 @@ p {
 
 // Faint blueprint-grid over a soft ambient color wash, both fading out
 // toward the bottom of the viewport rather than tiling the whole page flat.
-body::before {
-	content: '';
-	position: fixed;
-	inset: 0;
-	z-index: 0;
-	pointer-events: none;
-	background-image:
-		linear-gradient(var(--border-hairline) 1px, transparent 1px),
-		linear-gradient(90deg, var(--border-hairline) 1px, transparent 1px);
-	background-size:
-		64px 64px,
-		64px 64px;
-	mask-image: radial-gradient(
-		ellipse 90% 60% at 50% 0%,
-		black 40%,
-		transparent 85%
-	);
-	opacity: 0.65;
-}
+// body::before {
+// 	content: '';
+// 	position: fixed;
+// 	inset: 0;
+// 	z-index: 0;
+// 	pointer-events: none;
+// 	background-image:
+// 		linear-gradient(var(--border-hairline) 1px, transparent 1px),
+// 		linear-gradient(90deg, var(--border-hairline) 1px, transparent 1px);
+// 	background-size:
+// 		64px 64px,
+// 		64px 64px;
+// 	mask-image: radial-gradient(
+// 		ellipse 90% 60% at 50% 0%,
+// 		black 0%,
+// 		transparent 100%
+// 	);
+// 	opacity: 0.65;
+// }
 
 body::after {
 	content: '';

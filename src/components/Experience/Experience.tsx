@@ -5,24 +5,20 @@ import Reveal from '../Reveal/Reveal';
 import styles from './experience.module.scss';
 
 const dividerLabel = (featured: boolean) =>
-	featured
-		? 'Since transitioning to engineering'
-		: 'Before the switch — enterprise sales';
+	featured ?
+		'Since transitioning to engineering'
+	:	'Before the switch — enterprise sales';
 
 // Minimal inline markup: wrap a phrase in **double asterisks** in the data
 // file to render it emphasized, without pulling in a markdown dependency.
 const renderEmphasis = (text: string) =>
-	text
-		.split(/\*\*(.+?)\*\*/g)
-		.map((part, i) =>
-			i % 2 === 1 ? (
-				<strong key={i} className={styles.emphasis}>
-					{part}
-				</strong>
-			) : (
-				part
-			)
-		);
+	text.split(/\*\*(.+?)\*\*/g).map((part, i) =>
+		i % 2 === 1 ?
+			<strong key={i} className={styles.emphasis}>
+				{part}
+			</strong>
+		:	part,
+	);
 
 const Experience = () => {
 	return (
@@ -46,7 +42,7 @@ const Experience = () => {
 										{dividerLabel(item.featured)}
 									</span>
 									<span className={styles.dividerLine} />
-								</li>
+								</li>,
 							);
 						}
 
@@ -81,7 +77,7 @@ const Experience = () => {
 										))}
 									</ul>
 								</div>
-							</Reveal>
+							</Reveal>,
 						);
 
 						return nodes;
