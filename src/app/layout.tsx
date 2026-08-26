@@ -26,16 +26,66 @@ export const metadata: Metadata = {
 	metadataBase: new URL('https://evanbaron.dev'),
 	title: 'Evan Baron | Full-Stack Engineer',
 	description:
-		'Full-stack engineer building production web applications end-to-end with Next.js, React, TypeScript, and PostgreSQL.',
-	icons: {
-		icon: '/favicon.svg',
-	},
+		'Full-stack engineer building production web applications end-to-end with Next.js, React, TypeScript, and PostgreSQL. Portfolio, projects, and experience.',
+
 	openGraph: {
 		title: 'Evan Baron | Full-Stack Engineer',
 		description:
 			'Full-stack engineer building production web applications end-to-end with Next.js, React, TypeScript, and PostgreSQL.',
+		url: 'https://evanbaron.dev',
+		siteName: 'Evan Baron',
+		locale: 'en_US',
 		type: 'website',
 	},
+
+	twitter: {
+		card: 'summary',
+		title: 'Evan Baron | Full-Stack Engineer',
+		description:
+			'Full-stack engineer building production web applications end-to-end with Next.js, React, TypeScript, and PostgreSQL.',
+	},
+
+	keywords: [
+		'Evan Baron',
+		'full-stack engineer',
+		'software engineer portfolio',
+		'Next.js developer',
+		'React developer',
+		'TypeScript developer',
+		'PostgreSQL',
+		'web developer portfolio',
+	],
+	authors: [{ name: 'Evan Baron', url: 'https://evanbaron.dev' }],
+	creator: 'Evan Baron',
+	robots: {
+		index: true,
+		follow: true,
+		googleBot: {
+			index: true,
+			follow: true,
+			'max-video-preview': -1,
+			'max-image-preview': 'large',
+			'max-snippet': -1,
+		},
+	},
+
+	icons: {
+		icon: '/favicon.svg',
+	},
+};
+
+const structuredData = {
+	'@context': 'https://schema.org',
+	'@type': 'Person',
+	name: 'Evan Baron',
+	url: 'https://evanbaron.dev',
+	jobTitle: 'Full-Stack Engineer',
+	description:
+		'Full-stack engineer building production web applications end-to-end with Next.js, React, TypeScript, and PostgreSQL.',
+	sameAs: [
+		'https://github.com/evan-baron',
+		'https://linkedin.com/in/evangbaron',
+	],
 };
 
 export default function RootLayout({ children }: LayoutProps<'/'>) {
@@ -44,6 +94,14 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
 			lang='en'
 			className={`${fraunces.variable} ${jetbrainsMono.variable} ${publicSans.variable}`}
 		>
+			<head>
+				<script
+					type='application/ld+json'
+					dangerouslySetInnerHTML={{
+						__html: JSON.stringify(structuredData),
+					}}
+				/>
+			</head>
 			<body>{children}</body>
 		</html>
 	);
