@@ -6,7 +6,9 @@
 	backdrop-filter: blur(10px);
 	-webkit-backdrop-filter: blur(10px);
 	border-bottom: 1px solid transparent;
-	transition: border-color 0.3s var(--ease-out), background 0.3s var(--ease-out);
+	transition:
+		border-color 0.3s var(--ease-out),
+		background 0.3s var(--ease-out);
 	will-change: border-color, background;
 
 	&.scrolled {
@@ -39,7 +41,9 @@
 	border: 1px solid var(--border-strong);
 	padding: 4px 9px;
 	border-radius: var(--radius-sm);
-	transition: border-color 0.2s, box-shadow 0.2s;
+	transition:
+		border-color 0.2s,
+		box-shadow 0.2s;
 	will-change: border-color, box-shadow;
 }
 
@@ -67,19 +71,22 @@
 	height: 6px;
 	border-radius: 50%;
 	background: var(--accent-2);
-	box-shadow: 0 0 0 0 var(--accent-2-soft);
-	animation: pulse 2.4s infinite;
-}
+	box-shadow: 0 0 0 0 rgb(82, 227, 194);
+	animation: pulse-glow-effect 1.5s infinite ease-in-out;
 
-@keyframes pulse {
-	0% {
-		box-shadow: 0 0 0 0 rgba(127, 217, 196, 0.5);
-	}
-	70% {
-		box-shadow: 0 0 0 6px rgba(127, 217, 196, 0);
-	}
-	100% {
-		box-shadow: 0 0 0 0 rgba(127, 217, 196, 0);
+	@keyframes pulse-glow-effect {
+		0% {
+			transform: scale(0.95);
+			box-shadow: 0 0 0 0 rgba(82, 227, 194, 0.8);
+		}
+		70% {
+			transform: scale(1);
+			box-shadow: 0 0 0 6px rgba(82, 227, 194, 0);
+		}
+		100% {
+			transform: scale(0.95);
+			box-shadow: 0 0 0 0 rgba(82, 227, 194, 0);
+		}
 	}
 }
 
@@ -139,7 +146,10 @@
 	padding: 9px 18px;
 	border-radius: var(--radius-sm);
 	white-space: nowrap;
-	transition: transform 0.2s var(--ease-out), filter 0.2s, box-shadow 0.2s;
+	transition:
+		transform 0.2s var(--ease-out),
+		filter 0.2s,
+		box-shadow 0.2s;
 	will-change: transform, filter, box-shadow;
 
 	&:hover {
@@ -169,7 +179,9 @@
 		width: 20px;
 		height: 2px;
 		background: var(--text);
-		transition: transform 0.25s var(--ease-out), opacity 0.25s;
+		transition:
+			transform 0.25s var(--ease-out),
+			opacity 0.25s;
 		will-change: transform, opacity;
 		position: relative;
 	}
@@ -206,7 +218,9 @@
 	max-height: 0;
 	overflow: hidden;
 	border-bottom: 1px solid transparent;
-	transition: max-height 0.35s var(--ease-out), border-color 0.3s;
+	transition:
+		max-height 0.35s var(--ease-out),
+		border-color 0.3s;
 	will-change: max-height, border-color;
 
 	nav {

@@ -3,14 +3,19 @@ import Reveal from '../Reveal/Reveal';
 import styles from './about.module.scss';
 
 const stats = [
-	{ value: '3', label: 'Full-stack apps shipped solo, end-to-end' },
 	{
-		value: '30+ hrs',
-		label: 'Saved per employee/week via automation platforms built',
+		value: '3',
+		label:
+			'Production platforms shipped solo: schema, auth, integrations, and deploy',
+	},
+	{
+		value: '16+',
+		label:
+			'Production technologies integrated solo: Auth0, Gmail API, Prisma, Postgres, and more',
 	},
 	{
 		value: '$10M+',
-		label: 'In enterprise business closed before the switch to code',
+		label: 'In enterprise business closed before the switch to coding',
 	},
 ];
 
