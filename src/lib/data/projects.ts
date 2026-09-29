@@ -9,6 +9,31 @@ export type Project = {
 
 const projects: Project[] = [
 	{
+		name: 'Spoke & Circle',
+		tagline: 'Cycling team & group discovery platform',
+		stack: [
+			'Next.js',
+			'React',
+			'TypeScript',
+			'PostgreSQL',
+			'Node.js',
+			'TanStack Query',
+			'Zod',
+			'Auth0',
+			'Prisma',
+			'Neon',
+			'Vercel',
+		],
+		bullets: [
+			'Full-stack SaaS platform for discovering and joining local cycling teams and group rides, owned solo across schema, backend, frontend, and deployment.',
+			'Designed a PostgreSQL schema with Prisma ORM and an Auth0 role-gated admin review workflow, pairing team approval and rejection with automated Resend emails.',
+			'RESTful API layer in Node.js with Zod validation, database-backed rate limiting, and Cloudflare origin verification to stop abuse behind the CDN.',
+			'Deployment pipeline on Vercel with AWS-backed Neon serverless Postgres; handled auth hardening, security headers, SEO, and WCAG compliance.',
+		],
+		href: 'https://spokeandcircle.com',
+		linkLabel: 'Visit site',
+	},
+	{
 		name: 'Repliably',
 		tagline: 'Email automation & customer engagement platform',
 		stack: [
