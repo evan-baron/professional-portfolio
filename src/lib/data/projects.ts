@@ -25,7 +25,6 @@ const projects: Project[] = [
 			'Cloudinary',
 			'Resend',
 			'Google Analytics',
-			'Strava & RideWithGPS embeds',
 			'Vitest',
 			'Neon',
 			'Vercel',
