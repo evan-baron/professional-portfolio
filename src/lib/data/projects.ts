@@ -9,8 +9,8 @@ export type Project = {
 
 const projects: Project[] = [
 	{
-		name: 'Spoke & Circle',
-		tagline: 'Cycling team & group discovery platform',
+		name: 'Spoke&Circle',
+		tagline: 'Cycling team & group ride discovery platform',
 		stack: [
 			'Next.js',
 			'React',
@@ -20,15 +20,22 @@ const projects: Project[] = [
 			'TanStack Query',
 			'Zod',
 			'Auth0',
+			'SCSS',
 			'Prisma',
+			'Cloudinary',
+			'Resend',
+			'Google Analytics',
+			'Strava & RideWithGPS embeds',
+			'Vitest',
 			'Neon',
 			'Vercel',
+			'Cloudflare',
 		],
 		bullets: [
 			'Full-stack SaaS platform for discovering and joining local cycling teams and group rides, owned solo across schema, backend, frontend, and deployment.',
-			'Designed a PostgreSQL schema with Prisma ORM and an Auth0 role-gated admin review workflow, pairing team approval and rejection with automated Resend emails.',
-			'RESTful API layer in Node.js with Zod validation, database-backed rate limiting, and Cloudflare origin verification to stop abuse behind the CDN.',
-			'Deployment pipeline on Vercel with AWS-backed Neon serverless Postgres; handled auth hardening, security headers, SEO, and WCAG compliance.',
+			'Location search with gazetteer-backed autocomplete and radius filtering, plus a timezone-aware group ride calendar with pace filters.',
+			'Cloudinary media with signed uploads and Strava and RideWithGPS route embeds behind strict URL validation.',
+			'Auth0 role-gated admin review, Zod-validated API with database-backed rate limiting, and Cloudflare origin verification; deployed on Vercel with Neon Postgres.',
 		],
 		href: 'https://spokeandcircle.com',
 		linkLabel: 'Visit site',
