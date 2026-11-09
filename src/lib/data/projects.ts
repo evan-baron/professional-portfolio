@@ -1,6 +1,7 @@
 export type Project = {
 	name: string;
 	tagline: string;
+	year: string;
 	stack: string[];
 	bullets: string[];
 	href: string;
@@ -9,8 +10,34 @@ export type Project = {
 
 const projects: Project[] = [
 	{
+		name: 'Oskar Saks Photography',
+		tagline: 'Photography portfolio site with custom admin console',
+		year: '2026',
+		stack: [
+			'Next.js',
+			'React',
+			'TypeScript',
+			'PostgreSQL',
+			'Prisma',
+			'SCSS',
+			'Zod',
+			'Cloudinary',
+			'Resend',
+			'Neon',
+			'Vercel',
+		],
+		bullets: [
+			'Full-stack portfolio site for a professional photographer, owned solo from design through deployment, with category galleries, services, and about pages.',
+			'Custom admin console with session-based auth, drag-and-drop photo ordering, and direct-to-Cloudinary signed uploads so the client manages galleries and site content without a developer.',
+			'PostgreSQL schema with Prisma on Neon serverless, Zod-validated inputs, and full SEO coverage including structured data, sitemap, and robots.',
+		],
+		href: 'https://www.oskarsaksphoto.com',
+		linkLabel: 'Visit site',
+	},
+	{
 		name: 'Spoke&Circle',
 		tagline: 'Cycling team & group ride discovery platform',
+		year: '2026',
 		stack: [
 			'Next.js',
 			'React',
@@ -42,6 +69,7 @@ const projects: Project[] = [
 	{
 		name: 'Repliably',
 		tagline: 'Email automation & customer engagement platform',
+		year: '2025',
 		stack: [
 			'Next.js',
 			'React',
@@ -66,8 +94,21 @@ const projects: Project[] = [
 		linkLabel: 'Visit site',
 	},
 	{
+		name: 'Retcon Consulting',
+		tagline: 'Digital consulting services web application',
+		year: '2025',
+		stack: ['Next.js', 'React', 'TypeScript', 'SCSS', 'Netlify', 'Railway'],
+		bullets: [
+			'Performance-optimized marketing site with custom animations, full SEO implementation, and complete UI/UX ownership from concept to production.',
+			'Managed the CI/CD pipeline and hosting infrastructure; iterated rapidly on design and user journey from stakeholder feedback.',
+		],
+		href: 'https://retconconsulting.com',
+		linkLabel: 'Visit site',
+	},
+	{
 		name: 'YoyoCollector.com',
 		tagline: 'Collection management database platform',
+		year: '2025',
 		stack: [
 			'Next.js',
 			'React',
@@ -82,17 +123,6 @@ const projects: Project[] = [
 			'Designed a normalized MySQL schema supporting complex joins, real-time operations, and user-scoped data views; optimized queries as data volume grew.',
 		],
 		href: 'https://yoyocollector.com',
-		linkLabel: 'Visit site',
-	},
-	{
-		name: 'Retcon Consulting',
-		tagline: 'Digital consulting services web application',
-		stack: ['Next.js', 'React', 'TypeScript', 'SCSS', 'Netlify', 'Railway'],
-		bullets: [
-			'Performance-optimized marketing site with custom animations, full SEO implementation, and complete UI/UX ownership from concept to production.',
-			'Managed the CI/CD pipeline and hosting infrastructure; iterated rapidly on design and user journey from stakeholder feedback.',
-		],
-		href: 'https://retconconsulting.com',
 		linkLabel: 'Visit site',
 	},
 ];

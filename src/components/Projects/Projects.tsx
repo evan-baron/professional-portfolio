@@ -68,7 +68,13 @@ const Projects = () => {
 											<div className={styles.cardHead}>
 												<h3 className={styles.name}>{project.name}</h3>
 											</div>
-											<p className={styles.tagline}>{project.tagline}</p>
+											<p className={styles.tagline}>
+													{project.tagline}
+													<span className={styles.dates}>
+														<span aria-hidden='true'> · </span>
+														{project.year}
+													</span>
+												</p>
 
 											<ul className={styles.bullets}>
 												{project.bullets.map((bullet) => (
