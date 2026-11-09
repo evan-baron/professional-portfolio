@@ -25,7 +25,7 @@ const skills: SkillGroup[] = [
 	},
 	{
 		label: 'Cloud & DevOps',
-		items: ['AWS', 'Vercel', 'Railway', 'Netlify', 'CI/CD', 'Git'],
+		items: ['AWS', 'Vercel', 'Railway', 'Netlify', 'Cloudflare', 'CI/CD', 'Git'],
 	},
 	{
 		label: 'Tools & Libraries',
@@ -33,6 +33,8 @@ const skills: SkillGroup[] = [
 			'VS Code',
 			'Figma',
 			'Cloudinary',
+			'Resend',
+			'Vitest',
 			'OAuth',
 			'Auth0',
 			'Zod',
